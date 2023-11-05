@@ -1,11 +1,11 @@
 import React, {useContext, useState} from 'react';
-import {Context} from "./Home";
+import {FormContext} from "./context/FormContext";
 import {ThemeContext} from "./context/ThemeContext";
 
 const AddNewTask = () => {
 
     const [name, setName] = useState('');
-    const {onAddTask} = useContext(Context)
+    const {onAddTask} = useContext(FormContext)
     const {isDark, setIsDark} = useContext(ThemeContext)
 
     const handleThemeChange = () => {
@@ -15,7 +15,7 @@ const AddNewTask = () => {
     return (
         <div>
                 <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
-                <button onClick={() => onAddTask(name)}>)))</button>
+                <button onClick={() => onAddTask(name)}>Add</button>
                 <button onClick={handleThemeChange}>Change theme</button>
         </div>
     );

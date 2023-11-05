@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
-import {Context} from "./Home";
+import {FormContext} from "./context/FormContext";
 
 const List = () => {
 
-    const {tasks} = useContext(Context);
+    const {tasks} = useContext(FormContext);
 
     return (
         <div>
